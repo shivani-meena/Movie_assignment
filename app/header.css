@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Karantina');
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
+.header-row {
+    align-items: center;
+    justify-content:space-between;
+    padding: 10px 0 10px;
+    color: #F3F3F3;
+    font-size: 50px;
+    font-family:Karantina;
+}
+
+.search{
+    text-align:left;
+    border: #F3F3F3 solid 2px;
+}
+
+.hr {
+    border-bottom: red solid 2px;
+    margin: 5px;
+}
+
+.header-img{
+    width:100px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.logo-image {
+    color: #F3F3F3;
+    font-family: Karantina;
+    font-size: 40px;
+}
+
+.input-text {
+    width: 240px;
+    height: 60px;
+    float: left;
+    border: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.font{
+    font-size: 12px;
+    color: aliceblue;
+    font-family: kanit;
+}
