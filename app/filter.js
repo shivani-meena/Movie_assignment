@@ -37,15 +37,16 @@ function Filter() {
                 </select>
             </label>
             <label>
-            <span className='font-size'>Year:</span>
-            <input type="number" />
+            <span className='font-size year'>Year:</span>
+            <input className="width" type="number" />
             </label>
             <label>
             <span className='font-size'>Rating:</span>
-            <input type="number" />
+            <input className="width" type="number" />
             </label>
+            <span className='font-size '>Dropdown:</span>
             <Select
-                className='font-size'
+                className="width dropdown-label"
                 options={genreOptions}
                 value={selectedGenre}
                 onChange={handleGenreChange}

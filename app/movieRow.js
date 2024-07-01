@@ -6,8 +6,8 @@ function Movie_row({ movie }) {
             <div className="image-div">
                 <img className="image" src={movie.poster} />
             </div>
-            <h3 className="font title">{movie.title}</h3>
-            <div className="font plot">{movie.genres}</div>
+            <h4 className=" title">{movie.title}</h4>
+            <div className="font plot">{movie.genres} | {movie.release_year}</div>
             <div className="font plot">{movie.plot}</div>
         </div>
     );

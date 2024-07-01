@@ -1,25 +1,12 @@
 .filter {
     color: #ccc;
-    display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* Use gap to add space between items */
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
     margin: 0 auto;
-    max-width: 600px; /* Adjust max-width as needed */
-  }
-  
+}  
   .filter label {
     display: flex;
-    flex-direction: column; /* Stack label text above the input */
-    width:80%; /* Ensure labels take full width */
-  }
-  
-  .filter label .font-size {
-    font-size: 14px; /* Adjust font size as needed */
-    font-weight: bold;
-    margin-bottom: 5px; /* Add space between label and input */
+    flex-direction: column; 
+    width:80%; 
   }
   
   .filter select,
@@ -27,20 +14,22 @@
   .multi-select {
     padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%; /* Ensure all inputs take full width of their container */
-    max-width: none; /* Remove max-width if previously set */
-    font-size: 14px; /* Adjust font size as needed */
+    font-size: 14px; 
+    color: black;
   }
-  
-  .multi-select {
-    flex: 1; /* Make multi-select take remaining space */
-  }
-  
-  .filter p {
-    margin-top: 10px;
-    font-size: 14px; /* Adjust font size as needed */
-    color: #666;
-    width: 100%; /* Ensure the paragraph takes full width */
-  }
-  
+
+.width{
+  font-size: 14px;
+  width: 200px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.genre{
+  padding:10px;
+  margin-bottom:10px;
+}
+
+.dropdown-label {
+  color: Blue; 
+}

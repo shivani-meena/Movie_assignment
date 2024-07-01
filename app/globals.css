@@ -10,7 +10,6 @@ body {
 }
 
 .header {
-    border: solid white 2px;
     height: 150px;
     text-align: center;
 }
@@ -20,13 +19,11 @@ body {
 }
 
 .col2 {
-    border: solid white 2px;
     height: 400px;
 }
 
 .filter {
-    margin-top: 30px;
-    border: solid white 2px;
+    margin-top: 30px;  
     height: 500px;
 }
 
@@ -35,6 +32,7 @@ body {
     height: 30px;
     font-size: 20px;
     margin-left: 20px;
+    padding-right: 5px;
 }
 
 .length {
