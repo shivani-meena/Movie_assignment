@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Karantina');
 @import url('https://fonts.googleapis.com/css?family=Kanit');
+@import url('https://fonts.googleapis.com/css?family=jost');
+
+
 
 .header-row{
     padding: 10px 0 10px 0;
@@ -11,8 +14,8 @@
     font-size: 40px;
 }
 
-.hr {
-    border-bottom:red 3px;
+.hr{
+    border-bottom:red solid 3px;
 }
 
 .header-img {
@@ -51,4 +54,6 @@
 .title {
     margin-top: 5px;
     font-family: kanit;
+    color:#E85959;
+    font-size: 35px;
 }

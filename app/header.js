@@ -13,7 +13,6 @@ function Header({ handleSearch, searchText }) {
                     </div>
                     <div className='col-md-6 order-md-2 text-end'>
                         <div className='input'>
-                                {/* <img src="search.png" /> */}
                                 <input
                                     className='input-text'
                                     value={searchText}
@@ -24,7 +23,7 @@ function Header({ handleSearch, searchText }) {
                     </div>
                 </div>
             </div>
-            <hr className='hr' />
+            <hr className='hr'/>
         </>
     )
 }

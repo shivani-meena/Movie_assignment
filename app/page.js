@@ -1,44 +1,38 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Header from './header';
+import Filter from './filter';
 import MovieRow from './movieRow';
-import Select from 'react-select';
 import { initialMovieList } from './data.js';
+import Register from './register';
+import Pagination from './pagination';
 
 const MoviesPerPage = 6;
 
 function Home() {
-  const [searchText, setSearchText] = useState('');
   const [filteredMovies, setFilteredMovies] = useState(initialMovieList);
+  const [searchText, setSearchText] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const [year, setYear] = useState('');
   const [rating, setRating] = useState('');
+  const [selectedGenres, setSelectedGenres] = useState([]);
+
+  function filterMovies() {
+    const filtered = initialMovieList.filter(movie => {
+      const matchesSearchText = movie.title.toLowerCase().includes(searchText);
+      const matchesYear = year ? movie.release_year === parseInt(year) : true;
+      const matchesRating = rating ? movie.imdb_rating >= parseFloat(rating) : true;
+      const matchesGenres = selectedGenres.length ? selectedGenres.every(genre => movie.genres.split('|').includes(genre.value)) : true;
+
+      return matchesSearchText && matchesYear && matchesRating && matchesGenres;
+    });
+    setFilteredMovies(filtered);
+    setCurrentPage(1);
+  }
 
   useEffect(() => {
     filterMovies();
-  }, [searchText, year, rating]);
-
-  function test() {
-    console.log(year);
-  }
-
-
-  function handleSearch(text) {
-    setSearchText(text.toLowerCase());
-    setCurrentPage(1);
-  }
-  console.log("abcd");
-
-  function filterMovies() {
-    alert("alert filterMovies");
-    const filtered = initialMovieList.filter(movie => {
-      const matchesSearchText = movie.title.toLowerCase().includes(searchText);
-      const matchesYear = year ? movie.year === parseInt(year) : true;
-      const matchesRating = rating ? movie.rating >= parseFloat(rating) : true;
-      return matchesSearchText && matchesYear && matchesRating;
-    });
-    setFilteredMovies(filtered);
-  }
+  }, [searchText, year, rating, selectedGenres]);
 
   const totalPages = Math.ceil(filteredMovies.length / MoviesPerPage);
 
@@ -60,51 +54,36 @@ function Home() {
   return (
     <>
       <Header
-        handleSearch={handleSearch}
+        handleSearch={(text) => {
+          setSearchText(text.toLowerCase());
+        }}
         searchText={searchText}
       />
       <div className="container">
         <div className='row'>
           <div className='col-lg-3'>
-            <div className="filter">
-              <div className='filter-text'>Filters</div>
-              <label>
-                <div className='font-size year'>Year:</div>
-                <input className="filter-input" type="number" year={year} onChange={(e) => test(e.target.value)} />
-              </label>
-              <label>
-                <div className='font-size year'>Year:</div>
-                <input className="filter-input" type="number" value={year} onChange={(e) => setYear(e.target.value)} />
-              </label>
-              <label>
-                <div className='font-size'>Rating:</div>
-                <input className="filter-input" type="number" value={rating} onChange={(e) => setRating(e.target.value)} />
-              </label>
-              <div className='font-size'>Genres:</div>
-              <Select
-                className="filter-input"
-                placeholder="Select genres..."
-                isMulti
-              />
-            </div>
+            <Filter
+              setYear={setYear}
+              setRating={setRating}
+              setSelectedGenres={setSelectedGenres}
+            />
           </div>
           <div className='col-lg-9'>
-            <div className='row'>
-              {paginatedMovies.map((movie, index) => (
-                <MovieRow key={index} movie={movie} />
-              ))}
-            </div>
+            {paginatedMovies.map((movie, index) => (
+              <MovieRow key={index} movie={movie} />
+            ))}
           </div>
         </div>
+        <Pagination
+          prevPage={prevPage}
+          nextPage={nextPage}
+          currentPage={currentPage}
+          totalPages={totalPages}
+        />
       </div>
-      <div class="pagination">
-        <button onClick={prevPage} disabled={currentPage === 1}>Previous</button>
-        <span>{currentPage} / {totalPages}</span>
-        <button onClick={nextPage} disabled={currentPage === totalPages}>Next</button>
-      </div>
+      <Register />
     </>
   );
 }
+
 export default Home;
-
-
