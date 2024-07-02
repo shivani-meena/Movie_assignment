@@ -1,15 +1,15 @@
 import React from 'react';
 import './header.css';
 
-function Header({ handleSearch }) {
+function Header({ handleSearch, searchText }) {
     return (
         <div className='container'>
             <div className="row header-row">
-                <img className="header-img" src="Vector.png" alt="logo" />
-                Movies Collection
+                <img className="header-img" src="Vector.png" alt="logo" />Movie Catelog
                 <input 
                     className='input-text' 
-                    onChange={(e) => handleSearch(e.target.value)} 
+                    searchText ={searchText}
+                    onChange={(e) => handleSearch(e.target.value)}
                     placeholder='Enter Keywords....'
                 />
             </div>
@@ -17,5 +17,4 @@ function Header({ handleSearch }) {
         </div>
     )
 }
-
 export default Header;

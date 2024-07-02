@@ -1,11 +1,9 @@
 "use client";
-import React, { useState } from 'react';
 import Select from 'react-select';
 import './filter.css';
 
 
 function Filter() {
-    const [selectedGenre, setselectedGenre] = useState([]);
 
     const genreOptions = [
         { value: 'action', label: 'Action' },
@@ -24,19 +22,6 @@ function Filter() {
     return (
         <div className="filter">
             <label>
-                <span className='font-size'>Genre:</span>
-                <select className="genre">
-                    <option value="">All</option>
-                    <option value="Action">Action</option>
-                    <option value="Sci-Fi">Sci-Fi</option>
-                    <option value="Drama">Drama</option>
-                    <option value="Thriller">Thriller</option>
-                    <option value="Animation">Animation</option>
-                    <option value="Romance">Romance</option>
-                    <option value="War">War</option>
-                </select>
-            </label>
-            <label>
             <span className='font-size year'>Year:</span>
             <input className="width" type="number" />
             </label>
@@ -46,9 +31,8 @@ function Filter() {
             </label>
             <span className='font-size '>Dropdown:</span>
             <Select
-                className="width dropdown-label"
+                className="width "
                 options={genreOptions}
-                value={selectedGenre}
                 onChange={handleGenreChange}
                 placeholder="Select genres..."
                 isMulti
