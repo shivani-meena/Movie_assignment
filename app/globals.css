@@ -86,10 +86,8 @@ body {
 
 .col2{
     background-color: #49494C;
-    height: 400px;
+    height: 385px;
 }
-
- 
 
 .pagination {
     display: flex;
@@ -109,13 +107,5 @@ body {
   
   .pagination-button.active {
     background-color: #e74c3c; 
-  }
-  
-  .pagination-button:disabled {
-    cursor: not-allowed;
-  }
-  
-  .pagination-button:not(:disabled):hover {
-    cursor: not-allowed;
   }
   

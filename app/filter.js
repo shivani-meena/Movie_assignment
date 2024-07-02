@@ -3,6 +3,9 @@ import Select from 'react-select';
 import './filter.css';
 
 function Filter({year, rating, selectedGenres, setYear, setRating, setSelectedGenres}) {
+
+  // const genreOptions = ['Action', 'Adventure',  'Documentary',  'Romance'];
+
   const genreOptions = [
     { value: 'Action', label: 'Action' },
     { value: 'Adventure', label: 'Adventure' },
@@ -22,9 +25,9 @@ function Filter({year, rating, selectedGenres, setYear, setRating, setSelectedGe
         <input
           className="filter-input"
           type="number"
-          value={year}
-          onChange={(e) => {
-            setYear(e.target.value || '');
+          year={year}
+          onBlur={(e) => {
+            setYear(e.target.value);
           }}
         />
       </label>
@@ -33,9 +36,9 @@ function Filter({year, rating, selectedGenres, setYear, setRating, setSelectedGe
         <input
           className="filter-input"
           type="number"
-          value={rating}
-          onChange={(e) => {
-            setRating(e.target.value || '');
+          rating={rating}
+          onBlur={(e) => {
+            setRating(e.target.value);
           }}
         />
       </label>
@@ -45,7 +48,7 @@ function Filter({year, rating, selectedGenres, setYear, setRating, setSelectedGe
         placeholder="Select genres..."
         isMulti
         options={genreOptions}
-        value={selectedGenres}
+        selectedGenres={selectedGenres}
         onChange={(selected) => {
           setSelectedGenres(selected || []);
         }}
