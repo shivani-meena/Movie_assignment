@@ -1,29 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Karantina');
 @import url('https://fonts.googleapis.com/css?family=Kanit');
 
-.header-row {
-    align-items: center;
-    justify-content:space-between;
-    padding: 10px 0 10px;
-    color: #F3F3F3;
-    font-family:kanit;
+.header-row{
+    padding: 10px 0 10px 0;
 }
 
-.search{
-    text-align:left;
-    border: #F3F3F3 solid 2px;
+.movie-text {
+    color: #E85959;
+    font-family: kanit;
+    font-size: 40px;
 }
 
 .hr {
-    border-bottom: red solid 2px;
-    margin: 5px;
+    border-bottom:red 3px;
 }
 
-.header-img{
-    width:100px;
+.header-img {
+    width: 60px;
     margin-right: 20px;
-    margin-bottom: 5px;
-    margin-left: 10px;
+    margin-bottom: 15px;
+    margin-left: 15px;
 }
 
 .logo-image {
@@ -33,25 +29,26 @@
 }
 
 .input-text {
+    margin-bottom: 25px;
+    margin-top: 18px;
     width: 240px;
-    height: 60px;
-    float: left;
+    height: 40px;
     border: none;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    background-color: #D9D9D9;
+
 }
 
 .navbar-toggler {
     border: none;
 }
 
-.font{
+.font {
     font-size: 12px;
     color: aliceblue;
     font-family: kanit;
 }
 
-.title{
+.title {
     margin-top: 5px;
-    font-family:kanit;
+    font-family: kanit;
 }

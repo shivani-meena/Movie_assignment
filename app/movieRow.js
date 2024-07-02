@@ -1,4 +1,3 @@
-
 function Movie_row({ movie }) {
     console.log(movie);
     return (
@@ -13,3 +12,64 @@ function Movie_row({ movie }) {
     );
 }
 export default Movie_row;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function Movie_row({ movie }) {
+//     console.log(movie);
+//     return (
+//             <div className="image-div">
+//                 <div className="col-lg-8 col2">
+//                 <img className="image" src=""/>
+//                 <div className="font plot"></div>
+
+//                 </div>
+//                 <div className="col-lg-4 col2">
+//                 <h4 className=" title"></h4>
+//                 <div className="font plot"></div>
+//                  </div>
+//             </div>
+            
+//     );
+// }
+// export default Movie_row;
+
+
+
+
+
+
+
+
+

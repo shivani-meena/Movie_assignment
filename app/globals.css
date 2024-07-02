@@ -8,6 +8,9 @@ body {
         max-width: 1200px;
     }
 }
+.image-box{
+    display: inline-block;
+}
 
 .header {
     height: 150px;
@@ -25,6 +28,21 @@ body {
 .filter {
     margin-top: 30px;  
     height: 500px;
+    margin-right: 30px;
+}
+
+.filter-input{
+    background-color: #49494C;
+    border:none;
+    height:40px;
+    margin-top: 10px;
+    width: 280px;
+
+}
+
+.filter-text{
+    color: #FFFFFF;
+    font-size: 18px;
 }
 
 .genre {
@@ -40,8 +58,9 @@ body {
 }
 
 .font-size {
+    margin-top: 25px;
     font-size: 20px;
-    color: aliceblue;
+    color: #D9D9D9;
 }
 
 .title {
@@ -56,4 +75,70 @@ body {
 
 .image-div {
     height: 180px;
+}
+
+.filter-input .react-select__control {
+    background-color: red; /* General background color for the control */
+}
+
+.filter-input .react-select__input input {
+    background-color: red; /* Specific background color for the input field */
+}
+
+
+.col2{
+    border: solid red 2px;
+}
+
+
+
+
+/*pagination*/
+/* CSS for pagination buttons and text */
+/* CSS for pagination buttons and text */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    background-color: #f9f9f9; /* Light grey background */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+.pagination button,
+.pagination span {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: 1px solid #ddd; /* Light grey border */
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination button:disabled {
+    background-color: #e9ecef; /* Light grey background for disabled state */
+    color: #6c757d; /* Dark grey text for disabled state */
+    cursor: not-allowed;
+}
+
+.pagination button:not(:disabled):hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+.pagination .active {
+    background-color: #dc3545; /* Red background for active page */
+    color: #ffffff; /* White text for active page */
+    border-color: #dc3545; /* Red border for active page */
+}
+
+/* Optional: Adjusting arrow symbols */
+.pagination button::before {
+    content: attr(data-label); /* Use data-label for arrows */
+    margin-right: 5px;
 }
