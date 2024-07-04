@@ -1,5 +1,4 @@
-function Movie_row({ movie }) {
-    console.log(movie);
+function Movies({ movie }) {
     return (
         <div className="row col2">
             <div className="image-div col-lg-4">
@@ -7,14 +6,14 @@ function Movie_row({ movie }) {
             </div>
             <div  className="col-lg-8 description">
                 <h4 className="title">{movie.title}</h4>
-                <div className="font plot">{movie.genres} | {movie.release_year}</div>
-                <div className="font plot">{movie.plot}</div>
+                <div className="plot">{movie.plot.slice(0,500)}...</div>
+                <div  className="font-plot">Release Year: {movie.release_year} | Imdb Rating: {movie.imdb_rating} | Rating Count: {movie.rating_count}</div>
+                <div className="font-plot">Genres: {movie.genres} | Director: {movie.directors}</div>
             </div>
         </div>
     );
 }
-
-export default Movie_row;
+export default Movies;
 
 
 

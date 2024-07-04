@@ -14,14 +14,6 @@
     outline:none ;
   }
   
-  .filter select,
-  .filter input,
-  .multi-select {
-    padding: 8px;
-    border: 1px solid #ccc;
-    font-size: 14px; 
-    color: black;
-  }
 
 .width{
   font-size: 14px;
@@ -33,8 +25,4 @@
 .genre{
   padding:10px;
   margin-bottom:10px;
-}
-
-.dropdown-label {
-  color: Blue; 
 }

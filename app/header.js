@@ -1,6 +1,6 @@
 import React from 'react';
 import './header.css';
-function Header({ handleSearch, searchText }) {
+function Header({ handleSearch, searchText, handleLogout }) {
     return (
         <>
             <div className='container'>
@@ -13,17 +13,13 @@ function Header({ handleSearch, searchText }) {
                     </div>
                     <div className='col-md-6 order-md-2 text-end'>
                         <div className='input'>
-                                <input
-                                    className='input-text'
-                                    value={searchText}
-                                    onChange={(e) => handleSearch(e.target.value)}
-                                    placeholder='Enter Keywords....'
-                                />
+                            <input className='input-text' value={searchText} onChange={(e) => handleSearch(e.target.value)} placeholder='Enter Keywords...' />
                         </div>
                     </div>
                 </div>
             </div>
-            <hr className='hr'/>
+            <button onClick={handleLogout}>Logout</button>
+            <hr className='hr' />
         </>
     )
 }
